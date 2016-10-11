@@ -6,7 +6,7 @@ assume the target url is  http://www.w3schools.com <br>
 
 &gt; python webCrawl.py www.w3schols.com <br>
 or <br>
-> python webCrawl.py http://www.w3schols.com <br>
+&gt; python webCrawl.py http://www.w3schols.com <br>
 By default, it will fetch 1000 different urls directly or indirectly linked to target url and output links on links.txt <br>
 You can check the file "links_w3schools.com" I uploaed.  <br>
 
