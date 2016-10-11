@@ -20,7 +20,7 @@ It can be customized fetch by using following optional commands: <br>
 For exmpample, I'd like to crawl www.w3schools.com and I hope the key word is bootstrap and n is 500. <br>
 
 The command will be<br>
-&gt; python webCrawl.py www.w3schools.com  -n 500  -k bootstrap  -f links_bootstrap_n=500.txt <br>
+&gt; python webCrawl.py www.w3schools.com  -n 500  -k bootstrap  -f links_bootstrap_500.txt <br>
 
 So this program will use spider to crawl 500 different url and output the urls with key word "bootstrap".  <br>
 Please check the file links_bootstrap_n=500.txt <br>
