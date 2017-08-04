@@ -4,9 +4,9 @@ This code is to use Python 3.5 to use the web spider to iteratively find and fet
 In command prompt, run the following command: > python webCrawl.py <link> <br>
 assume the target url is  http://www.w3schools.com <br>
 
-&gt; python webCrawl.py www.w3schols.com <br>
-or <br>
-&gt; python webCrawl.py http://www.w3schols.com <br>
+```
+python webCrawl.py www.w3schols.com 
+```
 By default, it will fetch 1000 different urls directly or indirectly linked to target url and output links on links.txt <br>
 You can check the file "links.txt" I uploaed.  <br>
 
@@ -20,8 +20,9 @@ It can be customized fetch by using following optional commands: <br>
 For exmpample, I'd like to crawl www.w3schools.com and I hope the key word is  and n is 500. <br>
 
 The command will be<br>
-&gt; python webCrawl.py www.w3schools.com  -n 500  -k css  -f links_w3schools_css_500.txt <br>
-
+```
+> python webCrawl.py www.w3schools.com  -n 500  -k css  -f links_w3schools_css_500.txt
+```
 So this program will use spider to crawl 500 different url and output the urls with key word "css".  <br>
 Please check the file links_css_500.txt <br>
 
@@ -31,7 +32,11 @@ Here is the steps for install Python 3.5 and Beautiful.<br>
 1. Install Python 3.5 from http://conda.pydata.org/miniconda.html <br>
 2. install anaconda and update conda, anaconda (please see the attached slide) <br>
 In command prompt, run the following command: <br>
-&gt; conda install anaconda <br>
+```
+> conda install anaconda 
+```
 3. . Install bs4 library, after install Python 3.5 from conda <br>
 In command prompt, run the following command <br>
-&gt; conda install -c anaconda beautifulsoup4=4.5.1 <br> 
+```
+> conda install -c anaconda beautifulsoup4=4.5.1 
+```
