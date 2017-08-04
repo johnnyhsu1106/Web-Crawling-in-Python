@@ -5,7 +5,7 @@ In command prompt, run the following command: > python webCrawl.py <link> <br>
 assume the target url is  http://www.w3schools.com <br>
 
 ```
-python webCrawl.py www.w3schols.com 
+> python webCrawl.py www.w3schols.com 
 ```
 By default, it will fetch 1000 different urls directly or indirectly linked to target url and output links on links.txt <br>
 You can check the file "links.txt" I uploaed.  <br>
