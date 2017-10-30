@@ -4,7 +4,7 @@ Date: <10/09/2016>
 Version: 0.2 
 Description: Web Crawling 
 '''
-
+from collections import deque
 import requests
 from urllib import parse
 from bs4 import BeautifulSoup
@@ -53,27 +53,22 @@ class Spider:
 
 def crawling(url, max_pages, link_prefix, key_word, link_extension, file):  
 
-    pages_to_visit = [url]
+    pages_to_visit = deque([url])
     number_visited = 0
-    pages_visited = []
+    pages_visited = set([url])
 
-    while number_visited < max_pages and pages_to_visit != []:
-    
-        # Start from the beginning of our collection of pages to visit:
-        # url = pages_to_visit.pop() #Stack 
-        url = pages_to_visit[0] # Queue
-        pages_to_visit = pages_to_visit[1:] #Queue
-    
+    while number_visited < max_pages and pages_to_visit:
+     
+        url = pages_to_visit.popleft() # Queue , use deque like queue.
+        number_visited += 1
         try:
             spider = Spider()
-            if url not in pages_visited:
-                links = spider.get_link(url)
-                number_visited += 1
-                pages_visited.append(url)
-
-                if len(links) != 0 :
-                    pages_to_visit += links
-                    pages_to_visit = list(set(pages_to_visit)) # avoid to visit replicate url
+            links = spider.get_link(url)
+           
+            for link in links:
+                if link not in page_visited:
+                    pages_to_visit.append(link)
+                    pages_visited.add(link)
         except:
             pass
 
